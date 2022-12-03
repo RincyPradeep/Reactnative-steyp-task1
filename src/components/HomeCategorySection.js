@@ -3,7 +3,7 @@ import { StyleSheet, FlatList } from 'react-native'
 import React from 'react'
 
 import { category_data } from '../assets/js/CategoryData' 
-import CategoryCard from '../components/CategoryCard'
+import CategoryCard from './HomeCategoryCard'
 
 
 const HomeCategorySection = () => {

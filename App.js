@@ -29,16 +29,12 @@ const App = () => {
   const Tab = createBottomTabNavigator();
   const HomeStack = createNativeStackNavigator();
 
-  const HomeStackScreen =()=>(  
-    <HomeStack.Navigator >
-      <HomeStack.Screen name="HomeScreen" component={Home} options={{headerShown:false}} />
-      <HomeStack.Screen name="FlashSaleScreen" component={FlashSale} options={{headerShown:false}} />
-    </HomeStack.Navigator>
-  )
+  // const HomeStackScreen =()=>(  
+    
+  // )
 
-  return (
-    <NavigationContainer>           
-      <Tab.Navigator 
+  const HomeTabs =() =>(
+    <Tab.Navigator 
         screenOptions={({route})=>({
           headerShown:false,
           tabBarActiveTintColor:'black',
@@ -69,13 +65,20 @@ const App = () => {
           }
           })}
       >
-          <Tab.Screen name="Home" component={HomeStackScreen} />
+          <Tab.Screen name="Home" component={Home} />
           <Tab.Screen name="Search" component={Search} />
           <Tab.Screen name="Wishlist" component={Wishlist} />
           <Tab.Screen name="Bag" component={Bag} options={{tabBarBadge:3}}/>
           <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
+  )
 
+  return (
+    <NavigationContainer>                 
+      <HomeStack.Navigator >
+        <HomeStack.Screen name="HomeScreen" component={HomeTabs} options={{headerShown:false}} />
+        <HomeStack.Screen name="FlashSaleScreen" component={FlashSale} options={{headerShown:false}} />
+      </HomeStack.Navigator>
     </NavigationContainer>
   )
 }

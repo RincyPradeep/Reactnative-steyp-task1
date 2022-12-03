@@ -2,7 +2,7 @@ import { StyleSheet, Text, Image, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
 
-const CategoryCard = ({categoryItem}) => {
+const HomeCategoryCard = ({categoryItem}) => {
 
   return (
     <TouchableOpacity style={styles.cardContainer}>
@@ -14,7 +14,7 @@ const CategoryCard = ({categoryItem}) => {
   )
 }
 
-export default CategoryCard
+export default HomeCategoryCard
 
 const styles = StyleSheet.create({
     cardContainer:{

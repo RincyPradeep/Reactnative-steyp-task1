@@ -5,7 +5,7 @@ import Heart from '../assets/icons/like_black.svg'
 import YellowHeart from '../assets/icons/like_yellow.svg'
 
 
-const FlashCard = ({flashCardItem}) => {
+const HomeFlashCard = ({flashCardItem}) => {
   return (
     <TouchableOpacity style={styles.card}>  
       <View style={[styles.top, {"backgroundColor": flashCardItem.bg_color}]} >
@@ -35,7 +35,7 @@ const FlashCard = ({flashCardItem}) => {
   )
 }
 
-export default FlashCard
+export default HomeFlashCard
 
 const styles = StyleSheet.create({
   card:{
