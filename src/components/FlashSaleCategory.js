@@ -30,8 +30,8 @@ export default FlashSaleCategory
 
 const styles = StyleSheet.create({
     categoryContainer:{
-        marginLeft: 20,
-        marginVertical: 20
+        marginVertical: 20,
+        marginLeft: 20
     },
     
     categoryCard:{

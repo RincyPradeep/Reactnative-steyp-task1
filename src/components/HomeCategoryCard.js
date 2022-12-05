@@ -16,11 +16,11 @@ const HomeCategoryCard = ({categoryItem}) => {
 
 export default HomeCategoryCard
 
+
 const styles = StyleSheet.create({
     cardContainer:{
         marginRight: 15,
-        alignItems: 'center',
-        // height: 150
+        alignItems: 'center'
     },
 
     imageContainer:{

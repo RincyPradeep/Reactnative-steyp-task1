@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, ScrollView, Image, FlatList } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, FlatList } from 'react-native'
 
 import React from 'react'
 
@@ -7,48 +7,61 @@ import FlashSaleTop from '../components/FlashSaleTop'
 import FlashSaleMiddle from '../components/FlashSaleMiddle'
 import FlashSaleCategory from '../components/FlashSaleCategory'
 import FlashSaleBottom from '../components/FlashSaleBottom'
+import {flash_sale_data} from '../assets/js/FlashSaleData'
 
 
 const FlashSale = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
-        <FlashSaleTop />
-        <FlashSaleMiddle />
+      <FlatList
+        data={flash_sale_data}
+        keyExtractor={item => item.id.toString()}
+        keyboardDismissMode="on-drag"
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={
+          <>
+            <FlashSaleTop navigation={navigation} />
+            <FlashSaleMiddle />
 
-        <View style={styles.endTime}>
-          <Text style={styles.timeText}>Ends In</Text>
-          <Time />
-        </View>
+            <View style={styles.endTime}>
+              <Text style={styles.timeText}>Ends In</Text>
+              <Time />
+            </View>
 
-        <FlashSaleCategory />
-        <FlashSaleBottom />
-      </ScrollView>
-    </SafeAreaView>
-    
+            <FlashSaleCategory />
+          </>
+        }
+        
+        renderItem={({item}) => {
+          return (
+            <FlashSaleBottom item={item}/>
+          );
+        }}
+    />
+    </SafeAreaView>    
   )
 }
 
 export default FlashSale
 
+
 const styles = StyleSheet.create({
   container:{
     fontFamily: 'Gordita Regular',
     color: '#000',
-    backgroundColor: '#fff',
+    backgroundColor: '#fff'
   },
 
   endTime:{
     flexDirection: 'row',
     justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginHorizontal: 20
   },
 
   timeText:{
     fontFamily: 'Gordita Bold',
     fontSize: 20,
     color: '#000'
-  },
-
-  
+  }
 })

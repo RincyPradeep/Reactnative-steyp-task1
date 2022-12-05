@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
+
 import React from 'react'
 
 
 const HomeBottomSection = () => {
   return (
     <View style={styles.bottomContainer}>
-        <View style={styles.textContainer}>
+        <View>
             <Text style={styles.textOne}>Full Color Hoodie</Text>
             <Text style={styles.textTwo}>Sale up to 40% off</Text>
         </View>
@@ -18,6 +19,7 @@ const HomeBottomSection = () => {
 
 export default HomeBottomSection
 
+
 const styles = StyleSheet.create({
     bottomContainer:{
         height: 300,
@@ -28,10 +30,6 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         position:'relative',
         overflow: 'hidden'
-    },
-
-    textContainer:{
-
     },
 
     textOne:{
@@ -54,6 +52,5 @@ const styles = StyleSheet.create({
     image:{
         width: 250,
         resizeMode: 'contain'
-        
     }
 })

@@ -1,4 +1,3 @@
-import { StyleSheet, Image} from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -11,6 +10,8 @@ import Wishlist from './src/screens/Wishlist'
 import Bag from './src/screens/Bag'
 import Profile from './src/screens/Profile'
 import FlashSale from './src/screens/FlashSale'
+import Message from './src/screens/Message'
+import Notification from './src/screens/Notification'
 
 import HomeBlack from './src/assets/icons/home_fill_black.svg'
 import HomeGrey from './src/assets/icons/home_grey.svg'
@@ -29,15 +30,11 @@ const App = () => {
   const Tab = createBottomTabNavigator();
   const HomeStack = createNativeStackNavigator();
 
-  // const HomeStackScreen =()=>(  
-    
-  // )
-
   const HomeTabs =() =>(
     <Tab.Navigator 
         screenOptions={({route})=>({
           headerShown:false,
-          tabBarActiveTintColor:'black',
+          tabBarActiveTintColor:'#000',
           tabBarInactiveTintColor:'#A6A6A6',
           tabBarStyle: {
             backgroundColor: '#fff',
@@ -78,13 +75,11 @@ const App = () => {
       <HomeStack.Navigator >
         <HomeStack.Screen name="HomeScreen" component={HomeTabs} options={{headerShown:false}} />
         <HomeStack.Screen name="FlashSaleScreen" component={FlashSale} options={{headerShown:false}} />
+        <HomeStack.Screen name="Message" component={Message} options={{headerShown:false}} />
+        <HomeStack.Screen name="Notification" component={Notification} options={{headerShown:false}} />
       </HomeStack.Navigator>
     </NavigationContainer>
   )
 }
 
 export default App
-
-const styles = StyleSheet.create({
-  
-})

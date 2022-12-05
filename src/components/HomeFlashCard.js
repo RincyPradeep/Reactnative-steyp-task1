@@ -1,4 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+
 import React from 'react'
 
 import Heart from '../assets/icons/like_black.svg'
@@ -37,24 +38,21 @@ const HomeFlashCard = ({flashCardItem}) => {
 
 export default HomeFlashCard
 
+
 const styles = StyleSheet.create({
   card:{
     width: 240,
     height: 330,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    marginRight: 30,
-
-    // borderColor: '#000',
-    // borderWidth: 1
+    marginRight: 30
   },
 
   top:{
     width: '100%',
     height: '80%',
     borderRadius: 20,
-    padding: 15,
-
+    padding: 15
   },
 
   imageTop:{
@@ -72,7 +70,7 @@ const styles = StyleSheet.create({
 
   image:{
     width: '70%',
-    height: '70%',
+    height: '70%'
   },
 
   discount:{

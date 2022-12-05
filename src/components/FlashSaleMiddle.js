@@ -25,9 +25,9 @@ const FlashSaleMiddle = () => {
 
 export default FlashSaleMiddle
 
+
 const styles = StyleSheet.create({
     middle:{
-        marginHorizontal:20,
         marginVertical: 30,
         paddingHorizontal: 20,
         paddingVertical: 20,
@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#E7DDFF',
         borderRadius: 20,
-        height: 200
+        height: 200,
+        marginHorizontal: 20
     },
 
     left:{
@@ -79,5 +80,5 @@ const styles = StyleSheet.create({
     image:{
         width: '100%',
         resizeMode:'contain'
-    },
+    }
 })

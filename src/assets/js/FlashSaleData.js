@@ -6,7 +6,8 @@ export const flash_sale_data =[
         price: '59.00',
         old_price: '100.00',
         favourite: false,
-        sold: 253,
+        sold: 356,
+        stock: 1000,
         image: require('../images/foodie_vert_rose.png'),
         bg_color: '#FBE8E7'
     },
@@ -16,8 +17,9 @@ export const flash_sale_data =[
         discount: 30,
         price: '776.00',
         old_price: '1000.00',
-        favourite: false,
+        favourite: true,
         sold: 205,
+        stock: 500,
         image: require('../images/iphone_12.png'),
         bg_color: '#E7DDFF'
     },
@@ -28,7 +30,8 @@ export const flash_sale_data =[
         price: '390.00',
         old_price: '449.00',
         favourite: true,
-        sold: 236,
+        sold: 430,
+        stock: 500,
         image: require('../images/apple_watch_7.png'),
         bg_color: '#FBE8E7'
     },
@@ -39,7 +42,8 @@ export const flash_sale_data =[
         price: '169.00',
         old_price: '179.00',
         favourite: false,
-        sold: 180,
+        sold: 380,
+        stock: 500,
         image: require('../images/keychron.png'),
         bg_color: '#E7DDFF'
     },

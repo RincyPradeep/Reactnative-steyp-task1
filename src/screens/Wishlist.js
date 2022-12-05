@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import React from 'react'
 
 const Wishlist = () => {
@@ -10,5 +10,3 @@ const Wishlist = () => {
 }
 
 export default Wishlist
-
-const styles = StyleSheet.create({})

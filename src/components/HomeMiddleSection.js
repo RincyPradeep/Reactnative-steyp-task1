@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
+
 import React from 'react'
 
 import { flash_sale_data } from '../assets/js/FlashSaleData'
@@ -39,6 +40,7 @@ const HomeMiddleSection = ({navigation}) => {
 }
 
 export default HomeMiddleSection
+
 
 const styles = StyleSheet.create({
   flashSaleContainer:{

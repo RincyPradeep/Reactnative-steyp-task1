@@ -13,7 +13,7 @@ const Home = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <ScrollView>
-        <HomeTopSection />
+        <HomeTopSection navigation={navigation} />
         <HomeCategorySection />    
         <HomeMiddleSection navigation={navigation} />
         <HomeBottomSection />
@@ -26,10 +26,9 @@ export default Home
 
 
 const styles = StyleSheet.create({
-      container:{
-        fontFamily: 'Gordita Regular',
-        color: '#000',
-        backgroundColor: '#fff',
-        // flex:1,
-      },
+  container:{
+    fontFamily: 'Gordita Regular',
+    color: '#000',
+    backgroundColor: '#fff',
+  }
 })
